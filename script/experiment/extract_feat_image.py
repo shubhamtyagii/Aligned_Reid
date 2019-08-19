@@ -7,18 +7,12 @@ import matplotlib.image as img
 import numpy as np
 import os
 from sklearn.cluster import KMeans
-from PreProcessImage import *
+from .PreProcessImage import *
 import shutil
 from scipy.spatial import distance
-# import Dataset
-# from utils.utils.utils import measure_time
-# from utils.utils.re_ranking import re_ranking
-# from utils.utils.metric import cmc, mean_ap
-# from utils.utils.dataset_utils import parse_im_name
-from distance import normalize
-# from ..utils.distance import compute_dist
-# from ..utils.distance import local_dist
-# from ..utils.distance import low_memory_matrix_op
+
+from .distance import normalize
+
 
 class input: 
 
@@ -27,7 +21,6 @@ class input:
     self.directory_path=r'D:\DeepLearning\New folder\Aligned_ReId\data'
 
   def getstackedimages(self):
-      print('heher')
       ims=[]
       ims_names=[]
       ppi=PreProcessIm(resize_h_w=(256, 128))
@@ -123,3 +116,4 @@ class input:
 #
 # if __name__ == '__main__':
 #   main()
+
